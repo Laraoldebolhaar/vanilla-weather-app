@@ -1,3 +1,85 @@
+.weather-app {
+  display: block;
+  margin: 100px auto;
+  max-width: 700px;
+  padding: 25px;
+  border: 1px solid;
+  border-color: rgb(188, 188, 188);
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+#current-location {
+  border: none;
+  background-color: #ffffff;
+  margin: 6px 0px 0px 2px;
+}
+
+#current-location-img {
+  display: block;
+  margin: auto;
+  width: 30px;
+}
+
+#current-location-img:hover {
+  transform: scale(1.3);
+}
+
 h1 {
-  color: blue;
+  color: rgb(56, 56, 56);
+  font-size: 36px;
+  font-weight: bold;
+}
+
+h2 {
+  color: rgb(56, 56, 56);
+  font-weight: bolder;
+}
+
+h3 {
+  color: rgb(56, 56, 56);
+  font-size: 15px;
+  font-style: italic;
+}
+
+h4 {
+  color: rgb(56, 56, 56);
+  font-size: 15px;
+}
+
+h5 {
+  color: rgb(56, 56, 56);
+  text-align: center;
+  font-size: 110%;
+  font-weight: bolder;
+}
+
+h6 {
+  color: rgb(56, 56, 56);
+  text-align: right;
+  font-size: 15px;
+  font-style: italic;
+  padding: 5px;
+}
+
+.main-image {
+  width: 140px;
+  position: relative;
+  top: -10px;
+  right: 10px;
+}
+
+.forecast-img {
+  display: block;
+  margin: auto;
+  width: 60px;
+}
+
+#github-link {
+  color: rgb(56, 56, 56);
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: smaller;
+  text-decoration: none;
 }

@@ -38,11 +38,14 @@
             <div class="col-2">
               <input type="submit" value="Search" class="btn btn-warning" />
             </div>
-            <div class="col-3">
+            <div class="col-3" id="current-temperature">
               <h1 id="temperature"></h1>
               <span class="units"
-                ><a href="#" id="celcius" class="active">°C</a>|
-                <a href="#" id="fahrenheit">°F</a></span
+                ><a href="#" id="celcius" class="active">°C</a>|<a
+                  href="#"
+                  id="fahrenheit"
+                  >°F</a
+                ></span
               >
             </div>
             <div class="col-3">
@@ -58,16 +61,15 @@
 
           <div class="row">
             <div class="col-12">
-              <h3>Local time and date</h3>
+              <h3 id="time-date"></h3>
             </div>
           </div>
 
           <div class="row">
             <div class="col-12">
               <h4 id="forecast-in-words">
-                Today you can expect a low of
-                <span id="temp-low"></span>°C and a high of
-                <span id="temp-high"></span>°C. Due to the wind of
+                Today you can expect a low of <span id="temp-low"></span>°C and
+                a high of <span id="temp-high"></span>°C. Due to the wind of
                 <span id="wind"></span>km/h and the humidity of
                 <span id="humidity"></span>% it might fee like
                 <span id="feels-like"></span>°C.

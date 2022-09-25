@@ -44,6 +44,9 @@ function displayTemperature(response) {
   let icon = document.querySelector("#icon");
 
   celcius = response.data.main.temp;
+  min = response.data.main.temp_min;
+  max = response.data.main.temp_max;
+  feels = response.data.main.feels_like;
 
   temperature.innerHTML = Math.round(response.data.main.temp);
   location.innerHTML = response.data.name;
@@ -96,18 +99,45 @@ function navGeoLoc(event) {
 function showFahrenheit(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
+  let minTemperature = document.querySelector("#temp-low");
+  let maxTemperature = document.querySelector("#temp-high");
+  let feelsLikeTemperature = document.querySelector("#feels-like");
+  let cTextOne = document.querySelector("#c-text-one");
+  let cTextTwo = document.querySelector("#c-text-two");
+  let cTextThree = document.querySelector("#c-text-three");
   celciusTemp.classList.remove("active");
   fahrenheitTemp.classList.add("active");
+  cTextOne.innerHTML = "°F";
+  cTextTwo.innerHTML = "°F";
+  cTextThree.innerHTML = "°F";
   let fahrenheitTemperature = (celcius * 9) / 5 + 32;
+  let fahrenheidMinTemperature = (min * 9) / 5 + 32;
+  let fahrenheidMaxTemperature = (max * 9) / 5 + 32;
+  let fahrenheidFeelsLikeTemperature = (feels * 9) / 5 + 32;
   temperature.innerHTML = Math.round(fahrenheitTemperature);
+  minTemperature.innerHTML = Math.round(fahrenheidMinTemperature);
+  maxTemperature.innerHTML = Math.round(fahrenheidMaxTemperature);
+  feelsLikeTemperature.innerHTML = Math.round(fahrenheidFeelsLikeTemperature);
 }
 
 function showCelcius(event) {
   event.preventDefault();
   let temperature = document.querySelector("#temperature");
+  let minTemperature = document.querySelector("#temp-low");
+  let maxTemperature = document.querySelector("#temp-high");
+  let feelsLikeTemperature = document.querySelector("#feels-like");
+  let cTextOne = document.querySelector("#c-text-one");
+  let cTextTwo = document.querySelector("#c-text-two");
+  let cTextThree = document.querySelector("#c-text-three");
   fahrenheitTemp.classList.remove("active");
   celciusTemp.classList.add("active");
+  cTextOne.innerHTML = "°C";
+  cTextTwo.innerHTML = "°C";
+  cTextThree.innerHTML = "°C";
   temperature.innerHTML = Math.round(celcius);
+  minTemperature.innerHTML = Math.round(min);
+  maxTemperature.innerHTML = Math.round(max);
+  feelsLikeTemperature.innerHTML = Math.round(feels);
 }
 
 let celcius = null;

@@ -31,10 +31,6 @@
   max-width: 95%;
 }
 
-#search-form {
-  display: inline;
-}
-
 #current-temperature {
   text-align: right;
 }

@@ -72,6 +72,10 @@ h1 {
   text-decoration: none;
 }
 
+img[src=""] {
+  display: none;
+}
+
 h2 {
   color: rgb(56, 56, 56);
   font-weight: bolder;

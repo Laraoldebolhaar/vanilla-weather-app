@@ -51,7 +51,7 @@ function displayTemperature(response) {
   feelsLike.innerHTML = Math.round(response.data.main.feels_like);
   icon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${resonse.data.weather[0].icon}@2x.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
 

@@ -1,4 +1,34 @@
-function formatDate(timestamp) {}
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = (date.getHours() < 10 ? "0" : "") + date.getHours();
+  let minutes = (date.getMinutes() < 10 ? "0" : "") + date.getMinutes();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[date.getMonth()];
+  return `${day} ${month}, ${hours}:${minutes}`;
+}
 
 function displayTemperature(response) {
   console.log(response.data);
@@ -17,7 +47,7 @@ function displayTemperature(response) {
   wind.innerHTML = Math.round(response.data.wind.speed);
   humidity.innerHTML = response.data.main.humidity;
   feelsLike.innerHTML = Math.round(response.data.main.feels_like);
-  date.innerHTML = "Wednesday September 14, 18:55";
+  date.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 let apiKey = "6672216a4aa17866c4eee801a1995ca5";

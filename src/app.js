@@ -30,8 +30,8 @@ let months = [
 ];
 
 let month = months[now.getMonth()];
-let currentDate = document.querySelector("#time-date");
-currentDate.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes}`;
+let currentDateAndTime = document.querySelector("#time-date");
+currentDateAndTime.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes}`;
 
 function displayTemperature(response) {
   let temperature = document.querySelector("#temperature");

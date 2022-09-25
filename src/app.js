@@ -27,7 +27,7 @@ function formatDate(timestamp) {
     "December",
   ];
   let month = months[date.getMonth()];
-  return `${day} ${month}, ${hours}:${minutes}`;
+  return `${day} ${hours}:${minutes}`;
 }
 
 function displayTemperature(response) {
@@ -50,7 +50,8 @@ function displayTemperature(response) {
 }
 
 let apiKey = "6672216a4aa17866c4eee801a1995ca5";
+let city = "New York";
 let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather?`;
-let apiUrl = `${apiEndpoint}q=New York&appid=${apiKey}&units=metric`;
+let apiUrl = `${apiEndpoint}q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);

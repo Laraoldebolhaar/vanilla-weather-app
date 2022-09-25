@@ -39,6 +39,7 @@ function displayTemperature(response) {
   let humidity = document.querySelector("#humidity");
   let feelsLike = document.querySelector("#feels-like");
   let date = document.querySelector("#time-date");
+  let icon = document.querySelector("#icon");
   temperature.innerHTML = Math.round(response.data.main.temp);
   location.innerHTML = response.data.name;
   minTemperature.innerHTML = Math.round(response.data.main.temp_min);
@@ -47,6 +48,10 @@ function displayTemperature(response) {
   humidity.innerHTML = response.data.main.humidity;
   feelsLike.innerHTML = Math.round(response.data.main.feels_like);
   date.innerHTML = formatDate(response.data.dt * 1000);
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${resonse.data.weather[0].icon}@2x.png`
+  );
 }
 
 let apiKey = "6672216a4aa17866c4eee801a1995ca5";

@@ -57,18 +57,19 @@ h1 {
 }
 
 #celcius {
-  color: rgb(56, 56, 56);
   text-decoration: none;
+  color: rgb(255, 202, 44);
 }
 
 #fahrenheit {
-  color: rgb(56, 56, 56);
   text-decoration: none;
+  color: rgb(255, 202, 44);
 }
 
-#celcius:hover {
-  font-weight: bold;
-  transform: scale(1.5);
+#current-temperature .active {
+  color: rgb(56, 56, 56);
+  cursor: default;
+  text-decoration: none;
 }
 
 h2 {

@@ -42,6 +42,9 @@ function displayTemperature(response) {
   let humidity = document.querySelector("#humidity");
   let feelsLike = document.querySelector("#feels-like");
   let icon = document.querySelector("#icon");
+
+  celcius = response.data.main.temp;
+
   temperature.innerHTML = Math.round(response.data.main.temp);
   location.innerHTML = response.data.name;
   minTemperature.innerHTML = Math.round(response.data.main.temp_min);
@@ -89,3 +92,28 @@ function navGeoLoc(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(currentLocation);
 }
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temperature");
+  celciusTemp.classList.remove("active");
+  fahrenheitTemp.classList.add("active");
+  let fahrenheitTemperature = (celcius * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelcius(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#temperature");
+  fahrenheitTemp.classList.remove("active");
+  celciusTemp.classList.add("active");
+  temperature.innerHTML = Math.round(celcius);
+}
+
+let celcius = null;
+
+let fahrenheitTemp = document.querySelector("#fahrenheit");
+fahrenheitTemp.addEventListener("click", showFahrenheit);
+
+let celciusTemp = document.querySelector("#celcius");
+celciusTemp.addEventListener("click", showCelcius);

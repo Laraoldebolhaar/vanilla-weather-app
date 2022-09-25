@@ -31,7 +31,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   let temperature = document.querySelector("#temperature");
   let location = document.querySelector("#location");
   let minTemperature = document.querySelector("#temp-low");

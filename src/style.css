@@ -11,6 +11,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+.d-flex flex-wrap {
+  max-height: fit-content;
+}
+
 #current-location {
   border: none;
   background-color: #ffffff;
@@ -40,7 +44,7 @@ h1 {
   display: inline;
   font-size: 50px;
   font-weight: bold;
-  margin: 30px 0px 0px -10px;
+  margin: 0px 0px 0px -10px;
 }
 
 .units {
@@ -75,7 +79,7 @@ img[src=""] {
 h2 {
   color: rgb(56, 56, 56);
   font-weight: bolder;
-  margin: -30px 0px 5px 0px;
+  margin: -10px 0px 5px 0px;
 }
 
 h3 {

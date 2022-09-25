@@ -14,7 +14,7 @@
 #current-location {
   border: none;
   background-color: #ffffff;
-  margin: 0px 0px 0px -10px;
+  margin: 3px 0px 0px -10px;
 }
 
 #current-location-img {
@@ -28,7 +28,7 @@
 }
 
 .form-control {
-  max-width: 70%;
+  max-width: 95%;
 }
 
 #search-form {
@@ -79,7 +79,7 @@ h2 {
 
 h3 {
   color: rgb(56, 56, 56);
-  font-size: 15px;
+  font-size: 18px;
   font-style: italic;
   margin-bottom: 30px;
 }

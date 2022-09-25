@@ -1,38 +1,3 @@
-let now = new Date();
-
-let minutes = (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
-let hours = (now.getHours() < 10 ? "0" : "") + now.getHours();
-let date = now.getDate();
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-let day = days[now.getDay()];
-
-let months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-let month = months[now.getMonth()];
-let currentDateAndTime = document.querySelector("#time-date");
-currentDateAndTime.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes}`;
-
 function displayTemperature(response) {
   let temperature = document.querySelector("#temperature");
   let location = document.querySelector("#location");
@@ -73,12 +38,6 @@ function handelSubmit(event) {
   let cityInput = document.querySelector("#city-input");
   search(cityInput.value);
 }
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", handelSubmit);
-
-let currentLocationButton = document.querySelector("#current-location");
-currentLocationButton.addEventListener("click", navGeoLoc);
 
 function currentLocation(position) {
   let lat = position.coords.latitude;
@@ -140,6 +99,12 @@ function showCelcius(event) {
   feelsLikeTemperature.innerHTML = Math.round(feels);
 }
 
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handelSubmit);
+
+let currentLocationButton = document.querySelector("#current-location");
+currentLocationButton.addEventListener("click", navGeoLoc);
+
 let celcius = null;
 
 let fahrenheitTemp = document.querySelector("#fahrenheit");
@@ -147,3 +112,38 @@ fahrenheitTemp.addEventListener("click", showFahrenheit);
 
 let celciusTemp = document.querySelector("#celcius");
 celciusTemp.addEventListener("click", showCelcius);
+
+let now = new Date();
+
+let minutes = (now.getMinutes() < 10 ? "0" : "") + now.getMinutes();
+let hours = (now.getHours() < 10 ? "0" : "") + now.getHours();
+let date = now.getDate();
+let days = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+let day = days[now.getDay()];
+
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+let month = months[now.getMonth()];
+let currentDateAndTime = document.querySelector("#time-date");
+currentDateAndTime.innerHTML = `${day} ${month} ${date}, ${hours}:${minutes}`;
